@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/giantswarm/debug/status "Docker Repository on Quay")](https://quay.io/repository/giantswarm/debug)
+
 # Debug docker container
 
 Contains a lot of debugging tools for production. Based on alpine.
