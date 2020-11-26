@@ -1,6 +1,5 @@
 FROM alpine:edge
 
-MAINTAINER Timo Derstappen <teemow@gmail.com>
 
 RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories  
 
