@@ -1,7 +1,7 @@
 FROM alpine:edge
 
+RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
-RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories  
 
 # build/code
 RUN apk add --no-cache build-base git go bash bash-completion ncurses vim tmux jq
