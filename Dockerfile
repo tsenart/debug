@@ -2,17 +2,17 @@ FROM alpine:edge
 
 RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
-
-# build/code
-RUN apk add --no-cache build-base git go bash bash-completion ncurses vim tmux jq
-
-# network
-RUN apk add --no-cache bind-tools iputils tcpdump curl nmap tcpflow iftop net-tools mtr netcat-openbsd bridge-utils iperf ngrep
-
-# certificates
-RUN apk add --no-cache ca-certificates openssl
-
-# processes/io
-RUN apk add --no-cache htop atop strace iotop dstat sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv
+RUN apk update && \
+    apk add --no-cache \
+    # build/code
+    build-base git go bash bash-completion ncurses vim tmux jq \
+    # network
+    bind-tools iputils tcpdump curl nmap tcpflow iftop net-tools mtr netcat-openbsd bridge-utils iperf ngrep \
+    # certificates
+    ca-certificates openssl \
+    # processes/io
+    htop atop strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv \
+    # kubernetes
+    kubectl
 
 ENTRYPOINT bash
