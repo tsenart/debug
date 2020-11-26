@@ -7,12 +7,12 @@ Contains a lot of debugging tools for production. Based on alpine.
 * Build/code: `build-base git go bash bash-completion ncurses vim tmux jq`
 * Network: `bind-tools iputils tcpdump curl nmap tcpflow iftop net-tools mtr netcat-openbsd bridge-utils iperf ngrep`
 * Certificates: `ca-certificates openssl`
-* Processes/IO: `htop atop strace iotop dstat sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv`
+* Processes/IO: `htop atop strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv`
 
 ## Attach to an existing container
 
-```
-docker run --rm -ti --net container:<container-id> teemow/debug
+```nohighlight
+docker run --rm -ti --net container:<container-id> quay.io/giantswarm/debug
 ```
 
 ## Use tmux inside tmux
