@@ -13,8 +13,8 @@ RUN apk update && \
     # certificates
     ca-certificates openssl \
     # processes/io
-    htop atop strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv \
+    htop atop procps strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv \
     # kubernetes
     kubectl
 
-ENTRYPOINT bash
+CMD ['/bin/bash', '-il']
