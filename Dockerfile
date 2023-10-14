@@ -17,4 +17,4 @@ RUN apk update && \
     # kubernetes
     kubectl
 
-CMD ['/bin/bash', '-il']
+ENTRYPOINT /bin/bash
