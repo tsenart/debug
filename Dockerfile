@@ -1,5 +1,7 @@
 FROM alpine:edge
 
+LABEL org.opencontainers.image.source https://github.com/tsenart/debug
+
 RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
 
 RUN apk update && \
