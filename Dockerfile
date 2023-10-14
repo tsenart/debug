@@ -15,6 +15,6 @@ RUN apk update && \
     # processes/io
     htop atop procps strace iotop sysstat ltrace ncdu logrotate hdparm pciutils psmisc tree pv \
     # kubernetes
-    kubectl
+    kubectl vegeta
 
 ENTRYPOINT /bin/bash
